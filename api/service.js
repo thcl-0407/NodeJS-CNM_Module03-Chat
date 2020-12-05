@@ -229,5 +229,5 @@ function getAllRoomFor_A_User(id_user_1) {
 
 module.exports = {
     findIDRoomByIdUser12, findIDRoomByIdUser21, putNameRoom, deleteRoomByID, createTable,
-    putItemMessage, scanItemMessage, scanFirstItemMessage, getAllRoomFor_A_User
+    putItemMessage, scanItemMessage, scanFirstItemMessage, getAllRoomFor_A_User, checkTableExists
 }
