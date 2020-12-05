@@ -18,6 +18,12 @@ io.sockets.on('connection', (socket) => {
     socket.on('DANG_KY_PHONG', (dang_ky) => {
         socket.join(dang_ky.TenPhong)
         socket.Phong = dang_ky.TenPhong
+        
+        checkTableExists(dang_ky.TenPhong, (result) => {
+            if (!result) {
+                createTable(dang_ky.TenPhong).then(data => {})
+            }
+        })
     })
 
     //Lắng Nghe Người Dùng Nhập Tin Nhắn
