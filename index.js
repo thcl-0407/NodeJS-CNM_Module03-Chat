@@ -19,7 +19,7 @@ io.sockets.on('connection', (socket) => {
         socket.join(dang_ky.TenPhong)
         socket.Phong = dang_ky.TenPhong
         
-        checkTableExists(dang_ky.TenPhong, (result) => {
+         service_chat.checkTableExists(dang_ky.TenPhong, (result) => {
             if (!result) {
                 createTable(dang_ky.TenPhong).then(data => {})
             }
